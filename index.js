@@ -7,7 +7,9 @@ const app = express();
 const PORT = 5000;
 
 // Allow frontend to send requests
-app.use(cors());
+app.use(cors({
+    origin: 'https://buildamodel.in'
+}));
 
 // File handling
 const upload = multer({ storage: multer.memoryStorage() });
